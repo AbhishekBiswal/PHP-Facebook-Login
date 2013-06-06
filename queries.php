@@ -33,7 +33,7 @@
 
 		/* Add whatever you want to add. For the full permission list, check Facebook Developer Docs. */
 
-		$query = $dbc->prepare("SELECT * FROM usrs WHERE oauth_provider='facebook' AND oauth_uid=?");
+		$query = $dbc->prepare("SELECT * FROM users WHERE oauth_provider='facebook' AND oauth_uid=?");
 		$query->execute(array($user['id']));
 		while($data = $query->fetch())
 		{
